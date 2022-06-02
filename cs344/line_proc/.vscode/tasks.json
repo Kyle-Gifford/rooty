@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "c1 PTHREADING C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-pthread",
+				"-std=c99",
+				"-Wall",
+				"-Wextra",
+				"-Wpedantic",
+				"${file}",
+				"-o",
+				"${fileDirname}/bin/${fileBasenameNoExtension}_exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		},
+		{
+			"type": "cppbuild",
+			"label": "c2C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}/bin/${fileBasenameNoExtension}_exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}
